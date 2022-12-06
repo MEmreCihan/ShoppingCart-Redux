@@ -7,7 +7,7 @@ import Notification from "./components/UI/Notification";
 
 import { useSelector, useDispatch } from "react-redux";
 import { uiActions } from "./store/ui-slice";
-import {cartActions} from "./store/cartSlice";
+import { cartActions } from "./store/cartSlice";
 
 let isInitial = true;
 
@@ -28,7 +28,7 @@ function App() {
       const responseData = await response.json();
       dispatch(
         cartActions.replaceItem({
-          items: responseData.items,
+          items: responseData.items || [],
           totalQuantity: responseData.totalQuantity,
         })
       );
@@ -64,15 +64,15 @@ function App() {
       isInitial = false;
       return;
     }
-    sendCartData().catch((error) => {
-      dispatch(
-        uiActions.showNotification({
-          status: "error",
-          title: "Error!",
-          message: "Sending cart data failed!",
-        })
-      );
-    });
+      sendCartData().catch((error) => {
+        dispatch(
+          uiActions.showNotification({
+            status: "error",
+            title: "Error!",
+            message: "Sending cart data failed!",
+          })
+        );
+      });
   }, [cart, dispatch]);
 
   return (

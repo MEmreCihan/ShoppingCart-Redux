@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ShoppingCart-Redux/static/css/main.b1eadaf8.css",
+    "main.js": "/ShoppingCart-Redux/static/js/main.1204c828.js",
+    "index.html": "/ShoppingCart-Redux/index.html",
+    "main.b1eadaf8.css.map": "/ShoppingCart-Redux/static/css/main.b1eadaf8.css.map",
+    "main.1204c828.js.map": "/ShoppingCart-Redux/static/js/main.1204c828.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b1eadaf8.css",
+    "static/js/main.1204c828.js"
+  ]
+}
